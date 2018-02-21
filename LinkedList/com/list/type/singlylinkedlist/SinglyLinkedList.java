@@ -1,4 +1,4 @@
-package com.ds.linkedlist;
+package com.list.type.singlylinkedlist;
 
 import java.util.HashSet;
 
@@ -8,7 +8,7 @@ public class SinglyLinkedList<T>
 {
 	SinglyLinkedNode<T> head = null;
 
-	HashSet<T> uniqueList = new HashSet<T>();
+	HashSet<T> uniqueList = new HashSet<T>(); 
 
 	HashSet<SinglyLinkedNode<T>> loop = new HashSet<SinglyLinkedNode<T>>();
 

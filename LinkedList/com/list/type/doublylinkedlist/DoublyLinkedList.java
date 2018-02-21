@@ -1,5 +1,5 @@
 
-package com.ds.doublyllinkedlist;
+package com.list.type.doublylinkedlist;
 
 public class DoublyLinkedList<T>
 {

@@ -1,4 +1,4 @@
-package com.ds.linkedlist;
+package com.list.type.singlylinkedlist;
 
 public class SinglyLinkedNode<T> {
 

@@ -1,4 +1,4 @@
-package com.ds.doublyllinkedlist;
+package com.list.type.singlylinkedlist;
 
 public class MainClass
 {

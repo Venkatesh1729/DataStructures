@@ -1,4 +1,4 @@
-package com.ds.circularlinkedlist;
+package com.list.type.circularlinkedlist;
 
 public class MainClass
 {
