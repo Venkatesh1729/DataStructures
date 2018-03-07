@@ -1,4 +1,4 @@
-package com.src.hashing;
+package com.hash.type.separatechaining;
 
 public class HashNode<K, V>
 {

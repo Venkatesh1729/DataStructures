@@ -1,8 +1,8 @@
 
 package com.list.type.doublylinkedlist;
 
-public class DoublyLinkedList<T>
-{
+public class DoublyLinkedList<T> {
+	
 	private int length = 0;
 
 	private DoublyLinkedNode<T> head = null;
@@ -14,13 +14,17 @@ public class DoublyLinkedList<T>
 		DoublyLinkedNode<T> doublyLinkedListNode = createNode(data);
 		doublyLinkedListNode.setNextNode(head);
 		doublyLinkedListNode.setPrevNode(null);
+
 		if (head != null) {
 			head.setPrevNode(doublyLinkedListNode);
 		}
+
 		head = doublyLinkedListNode;
+
 		if (tail == null) {
 			tail = doublyLinkedListNode;
 		}
+
 		length++;
 
 	}
@@ -37,6 +41,7 @@ public class DoublyLinkedList<T>
 	public void insertLast(T data) {
 
 		if (head != null) {
+
 			DoublyLinkedNode<T> doublyLinkedListNode = createNode(data);
 			doublyLinkedListNode.setNextNode(null);
 			doublyLinkedListNode.setPrevNode(tail);
@@ -48,6 +53,7 @@ public class DoublyLinkedList<T>
 			tail = doublyLinkedListNode;
 
 			length++;
+
 		} else {
 			insertFirst(data);
 		}
@@ -64,34 +70,59 @@ public class DoublyLinkedList<T>
 	}
 
 	public void traverseForward() {
+
 		if (head != null) {
+
 			DoublyLinkedNode<T> traverseNode = head;
+
 			while (traverseNode != null) {
+
 				if (traverseNode.getNextNode() != null) {
+
 					System.out.print(traverseNode.getData() + " -> ");
+
 				} else {
+
 					System.out.println(traverseNode.getData());
+
 				}
+
 				traverseNode = traverseNode.getNextNode();
 			}
+
 		} else {
+
 			System.out.println("No data avaiable");
+
 		}
+
 	}
 
 	public void traverseBackward() {
+
 		if (tail != null) {
+
 			DoublyLinkedNode<T> traverseNode = tail;
+
 			while (traverseNode != null) {
+
 				if (traverseNode.getPrevNode() != null) {
+
 					System.out.print(traverseNode.getData() + " -> ");
+
 				} else {
+
 					System.out.println(traverseNode.getData());
+
 				}
+
 				traverseNode = traverseNode.getPrevNode();
+
 			}
 		} else {
+
 			System.out.println("No data avaiable");
+
 		}
 	}
 
@@ -110,13 +141,18 @@ public class DoublyLinkedList<T>
 		}
 
 		while (tempHead != null && tempTail != null) {
+
 			if (tempHead.getData().equals(tempTail.getData())) {
+
 				tempHead = tempHead.getNextNode();
 				tempTail = tempTail.getPrevNode();
+
 			} else {
+
 				return false;
 			}
 		}
+		
 		return true;
 	}
 }

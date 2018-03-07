@@ -1,7 +1,5 @@
 package com.ds.three.stack;
 
-import com.ds.stack.exception.StackException;
-
 public class NumberStackArray<T>
 {
 	private Object[] values = {};
@@ -18,7 +16,7 @@ public class NumberStackArray<T>
 
 	public void push(int stackNum, T data) throws Exception {
 		if (isFull(stackNum)) {
-			throw new StackException("Stack is full..!!");
+			throw new Exception("Stack is full..!!");
 		}
 		sizes[stackNum - 1]++;
 		values[arrayAt(stackNum)] = data;
@@ -26,7 +24,7 @@ public class NumberStackArray<T>
 
 	public Object pop(int stackNum) throws Exception {
 		if (isEmpty(stackNum)) {
-			throw new StackException("Stack is empty..!!");
+			throw new Exception("Stack is empty..!!");
 		}
 		Object temp = values[arrayAt(stackNum)];
 		values[arrayAt(stackNum)] = null;
